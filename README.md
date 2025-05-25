@@ -23,12 +23,19 @@ A simple Java-based web application to manage and track your income and expenses
 - HTML/CSS
 - Apache Tomcat
 
-## 💡 Project Structure
+📂 Folder Structure
 
-- `transactionForm.jsp`: Add transaction form
-- `viewTransactions.jsp`: Displays all transactions
-- `SummaryServlet.java`: Computes totals and balance
-- `TransactionDAO.java`: Handles DB operations
+ExpenseTracker/
+│
+├── src/com/pack/expensetracker/  # Java servlets and DAO classes
+├── WebContent/
+│   ├── index.jsp
+│   ├── transactionForm.jsp
+│   ├── success.jsp
+│   └── viewTransactions.jsp
+├── style.css                     # UI styling
+├── web.xml                      # Servlet configuration
+└── README.md                    # Project description
 
 ## 📦 How to Run
 
@@ -36,6 +43,13 @@ A simple Java-based web application to manage and track your income and expenses
 2. Configure Oracle DB credentials in `TransactionDAO.java`
 3. Deploy on Apache Tomcat server
 4. Open in browser: `http://localhost:8080/ExpenseTracker/`
+
+
+   📝 Future Enhancements
+ 1.Add user login and authentication
+ 2.Filter and search transactions by date/category
+ 3.Export data to Excel or PDF
+ 4.Use connection pooling and a framework like Spring Boot
 
 ## 📁 Database Setup
 
@@ -47,3 +61,6 @@ CREATE TABLE transactions (
     amount NUMBER(10,2),
     transaction_date DATE
 );
+
+
+
